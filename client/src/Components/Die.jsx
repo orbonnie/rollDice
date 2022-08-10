@@ -29,9 +29,6 @@ const Die = (props) => {
       break;
     case 6:
       Num = BsDice6;
-      break;
-    default:
-      Num = BsDice6;
   }
 
   let shake = props.shake ? 'shake' : '';
