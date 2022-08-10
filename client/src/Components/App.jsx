@@ -10,12 +10,12 @@ const App = () => {
     setTimeout(() => {
       setRolling(false);
     }, 1000)
-  }, [die1, die2])
+  }, [die1, die2, ''])
 
   const roll = () => {
     setRolling(true);
-    let rand1 = Math.floor(Math.random() * 6);
-    let rand2 = Math.floor(Math.random() * 6);
+    let rand1 = Math.ceil(Math.random() * 6);
+    let rand2 = Math.ceil(Math.random() * 6);
     setDie1(rand1);
     setDie2(rand2);
   }
