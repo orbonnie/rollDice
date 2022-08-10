@@ -5,7 +5,6 @@ import { BsDice3 } from "react-icons/bs";
 import { BsDice4 } from "react-icons/bs";
 import { BsDice5 } from "react-icons/bs";
 import { BsDice6 } from "react-icons/bs";
-import { IoDiceOutline } from "react-icons/io5";
 
 const Die = (props) => {
 
@@ -30,8 +29,6 @@ const Die = (props) => {
     case 6:
       Num = BsDice6;
   }
-
-  let shake = props.shake ? 'shake' : '';
 
   return (
     <span className='die-span' >

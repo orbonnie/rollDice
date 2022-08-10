@@ -23,10 +23,6 @@ const App = () => {
     setShake(rolls);
   }
 
-  // setTimeout(() => {
-  //   setRolling(false);
-  // }, 1000)
-
   return (
     <div className='main'>
       <div className='app-die-container'>
