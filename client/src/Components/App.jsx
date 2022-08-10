@@ -16,7 +16,7 @@ const App = () => {
 
   setTimeout(() => {
     setRolling(false);
-  }, 4000)
+  }, 1000)
 
   return (
     <div className='main'>
