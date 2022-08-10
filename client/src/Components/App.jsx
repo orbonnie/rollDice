@@ -5,12 +5,13 @@ const App = () => {
   const [rolling, setRolling] = useState(false);
   const [die1, setDie1] = useState(1);
   const [die2, setDie2] = useState(1);
+  const [shake, setShake] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
       setRolling(false);
     }, 1000)
-  }, [die1, die2, ''])
+  }, [shake])
 
   const roll = () => {
     setRolling(true);
@@ -18,6 +19,8 @@ const App = () => {
     let rand2 = Math.ceil(Math.random() * 6);
     setDie1(rand1);
     setDie2(rand2);
+    let rolls = shake + 1;
+    setShake(rolls);
   }
 
   // setTimeout(() => {
