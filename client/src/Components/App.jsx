@@ -1,10 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Die from './Die.jsx';
 
 const App = () => {
   const [rolling, setRolling] = useState(false);
   const [die1, setDie1] = useState(1);
   const [die2, setDie2] = useState(1);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setRolling(false);
+    }, 1000)
+  }, [die1, die2])
 
   const roll = () => {
     setRolling(true);
@@ -14,9 +20,9 @@ const App = () => {
     setDie2(rand2);
   }
 
-  setTimeout(() => {
-    setRolling(false);
-  }, 1000)
+  // setTimeout(() => {
+  //   setRolling(false);
+  // }, 1000)
 
   return (
     <div className='main'>
